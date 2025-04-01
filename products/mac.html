@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac - Apple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .product-hero {
+            background-image: url('https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .specs-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="product-hero h-96 flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">MacBook Pro</h1>
+            <p class="text-xl md:text-2xl mb-8">Supercharged for pros.</p>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" alt="MacBook front" class="rounded-lg shadow-md">
+                <img src="https://images.pexels.com/photos/7974/pexels-photo.jpg" alt="MacBook keyboard" class="rounded-lg shadow-md">
+                <img src="https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg" alt="MacBook workspace" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Specifications</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="specs-table min-w-full bg-white rounded-lg overflow-hidden">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Feature</th>
+                            <th class="py-3 px-4 text-left">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Display</td>
+                            <td class="py-3 px-4 border-b">14.2-inch Liquid Retina XDR display</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Chip</td>
+                            <td class="py-3 px-4 border-b">M2 Pro or M2 Max chip</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Memory</td>
+                            <td class="py-3 px-4 border-b">Up to 96GB unified memory</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Storage</td>
+                            <td class="py-3 px-4 border-b">Up to 8TB SSD</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Battery</td>
+                            <td class="py-3 px-4 border-b">Up to 18 hours video playback</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Now Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Ready to upgrade?</h2>
+            <button id="buy-now-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-xl font-medium">
+                Buy Now
+            </button>
+            
+            <!-- Buy Now Modal -->
+            <div id="buy-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+                <div class="bg-white rounded-lg p-8 max-w-md w-full">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl font-bold">Configure your Mac</h3>
+                        <button id="close-modal" class="text-gray-500 hover:text-gray-700">&times;</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Chip</label>
+                            <select class="w-full p-2 border rounded">
+                                <option>M2 Pro (10-core CPU, 16-core GPU)</option>
+                                <option>M2 Max (12-core CPU, 30-core GPU)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Memory</label>
+                            <select class="w-full p-2 border rounded">
+                                <option>16GB unified memory</option>
+                                <option>32GB unified memory</option>
+                                <option>64GB unified memory</option>
+                                <option>96GB unified memory</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 mb-2">Storage</label>
+                            <select class="w-full p-2 border rounded">
+                                <option>512GB SSD</option>
+                                <option>1TB SSD</option>
+                                <option>2TB SSD</option>
+                                <option>4TB SSD</option>
+                                <option>8TB SSD</option>
+                            </select>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load header and footer
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Buy now modal functionality
+        const buyNowBtn = document.getElementById('buy-now-btn');
+        const closeModal = document.getElementById('close-modal');
+        const buyModal = document.getElementById('buy-modal');
+
+        buyNowBtn.addEventListener('click', () => {
+            buyModal.classList.remove('hidden');
+        });
+
+        closeModal.addEventListener('click', () => {
+            buyModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
