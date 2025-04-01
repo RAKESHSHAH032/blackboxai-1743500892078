@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - Official Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-section {
+            background-image: url('https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center relative z-10 px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">iPhone 15 Pro</h1>
+            <p class="text-xl md:text-2xl mb-8">Titanium. So strong. So light. So Pro.</p>
+            <div class="space-x-4">
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-medium">Buy</a>
+                <a href="#" class="inline-block text-blue-400 hover:underline px-6 py-3 text-lg font-medium">Learn more ></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlights -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">The latest. Take a look at what's new, right now.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" alt="iPhone" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">iPhone 15 Pro</h3>
+                        <p class="text-gray-600 mb-4">The ultimate iPhone experience with our Pro camera system.</p>
+                        <a href="products/iphone.html" class="text-blue-500 hover:underline">Learn more ></a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg" alt="MacBook" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">MacBook Pro</h3>
+                        <p class="text-gray-600 mb-4">Supercharged for pros with the M2 Pro or M2 Max chip.</p>
+                        <a href="products/mac.html" class="text-blue-500 hover:underline">Learn more ></a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300">
+                    <img src="https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg" alt="iPad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">iPad Pro</h3>
+                        <p class="text-gray-600 mb-4">The ultimate iPad experience with the M2 chip.</p>
+                        <a href="products/ipad.html" class="text-blue-500 hover:underline">Learn more ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Apple is the best choice</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Privacy</h3>
+                    <p class="text-gray-600">Built from the ground up with privacy in mind.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Performance</h3>
+                    <p class="text-gray-600">Industry-leading chips for unmatched performance.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="text-4xl text-blue-500 mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly</h3>
+                    <p class="text-gray-600">Committed to a carbon neutral future by 2030.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load header and footer
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
